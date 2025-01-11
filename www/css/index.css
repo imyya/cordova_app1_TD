@@ -2,3 +2,15 @@
 .terminer{
     text-decoration: line-through;
 }
+
+h4{
+    text-align: center;
+}
+
+.add-btn{
+    background-color:rgb(72, 25, 202)!important;
+}
+
+.reset-btn{
+    background-color:rgb(133, 80, 0)!important;
+}

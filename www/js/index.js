@@ -10,12 +10,27 @@ window.onload = function (){
 
     addButton.onclick = function (){
         const item = document.createElement('li');
-        
+
         item.innerHTML = taskfield.value;
 
         tasklist.append(item);
         $(item).on('swiperight',function (){
-            $(item).toggleClass('terminer')
+            //$(item).toggleClass('terminer')
+            $(this).hide('fast',function(){
+                if($(this).parent().attr('id') === 'taskList'){
+                    console.log('terminer');
+                    $(this).appendTo(finishedTasks).show('fast');
+                }
+                else{
+                    console.log('en cours');
+                    $(this).appendTo(tasklist).show('fast');
+                }
+              //  $(this).remove();
+                //$(this).appendTo(finishedTasks).show('fast');
+            });
+          //  finishedTasks.append(item);
+            
+
         })
 
         $(item).on('swipeleft',function (){
@@ -27,6 +42,7 @@ window.onload = function (){
         $(tasklist).listview('refresh');
         taskfield.select();
     };
+
     
     
     //     addButton.onclick = function (){

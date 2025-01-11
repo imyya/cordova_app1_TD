@@ -19,17 +19,16 @@
                 <form action="">
                     <label for="task">Ajouter une tâche</label>
                     <input type="text" id="task">
-                    <input type="button" value="Ajouter">
-                    <input type="button" value="Réinitialiser">
+                    <input class="add-btn" type="button" value="Ajouter">
+                    <input class="reset-btn" type="button" value="Réinitialiser">
                 </form>
                 <ul id="taskList" data-role="listview" data-inset="true">
-                    <!-- <h1>En cours</h1> -->
+                    <h4>En cours</h4>
                 
                 </ul>
-                    <!-- <ul id="done" data-role="listview" data-inset="true">
-                        <h1>Termine</h1>
-                    
-                    </ul> -->
+                <ul id="done" data-role="listview" data-inset="true">
+                    <h4>Termine</h4>
+                </ul>
             </div>
 
             <div data-role="footer" data-position="fixed">
